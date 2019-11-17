@@ -1,2 +1,2 @@
 # Triggers
-This trigger export data sql to Invoices Digital
+This trigger export data to SQL Server to Invoices Digital
