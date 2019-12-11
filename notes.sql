@@ -1,4 +1,5 @@
 - Create user on database and grant privileges in table
+GRANT Database Permissions select, update
 use use dbtest
 go
 create login hddtvt with password='11111';
