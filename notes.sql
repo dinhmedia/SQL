@@ -13,3 +13,14 @@ grant select, update on halfbill to hddtvt;
 use dbtest
 go
 drop user test
+
+- sp_addlinkedserver
+use master
+go
+EXEC sp_addlinkedserver '192.168.x.x', N'SQL Server'
+go
+
+EXEC sp_addlinkedsrvlogin '192.168.x.x'','false',NULL,'demo','40rgP1912'
+go
+
+If use name, need edit file host
