@@ -22,3 +22,7 @@ go
 EXEC sp_addlinkedsrvlogin '192.168.x.x'','false',NULL,'demo','40rgP1912'
 go
 If use name, need edit file host
+- Update on table.
+UPDATE echeck
+SET check_no='CA/19E00000xx'
+WHERE date='2019-12-23 17:27:05.000';
