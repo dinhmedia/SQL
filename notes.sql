@@ -8,6 +8,8 @@ grant connect to hddtvt;
 grant select on customer to hddtvt;
 grant select, update on echeck to hddtvt;
 grant select, update on halfbill to hddtvt;
+- all select in databse
+grant select on schema :: [dbo]  to hddtvt;
 
 - Drop user on database
 use dbtest
