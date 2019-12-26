@@ -31,3 +31,7 @@ WHERE date='2019-12-23 17:27:05.000';
 
 - update fill on table
 alter table halfbill  alter column box_name char(200)
+
+- Query return times
+WHERE 
+h.check_date > dateadd(dd,-1,cast(getdate() as date))
