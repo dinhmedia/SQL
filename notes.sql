@@ -29,6 +29,10 @@ UPDATE echeck
 SET check_no='CA/19E00000xx'
 WHERE date='2019-12-23 17:27:05.000';
 
+- UPDATE halfbill
+SET check_no='AAA/20E0000001'
+WHERE half_no='2001000368';
+
 - update fill on table
 alter table halfbill  alter column box_name char(200)
 
