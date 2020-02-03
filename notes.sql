@@ -24,6 +24,7 @@ go
 EXEC sp_addlinkedsrvlogin '192.168.x.x'','false',NULL,'demo','40rgP1912'
 go
 If use name, need edit file host
+
 - Update on table.
 UPDATE echeck
 SET check_no='CA/19E00000xx'
@@ -32,6 +33,10 @@ WHERE date='2019-12-23 17:27:05.000';
 - UPDATE halfbill
 SET check_no='AAA/20E0000001'
 WHERE half_no='2001000368';
+
+- DELETE data on table
+DELETE FROM ToDigitalInvoices
+WHERE half_no = 2002000001;
 
 - update fill on table
 alter table halfbill  alter column box_name char(200)
