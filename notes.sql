@@ -44,3 +44,7 @@ alter table halfbill  alter column box_name char(200)
 - Query return times
 WHERE 
 h.check_date > dateadd(dd,-1,cast(getdate() as date))
+
+- Backup database to new table.
+select * into BCHUONG_200629 from BCHUONG
+
