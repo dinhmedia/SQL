@@ -48,3 +48,22 @@ h.check_date > dateadd(dd,-1,cast(getdate() as date))
 - Backup database to new table.
 select * into BCHUONG_200629 from BCHUONG
 
+- This restore only data for Table
+use DB-DEMO
+go
+
+INSERT INTO CMSMF 
+SELECT *
+FROM [DB-DEMO_re].[dbo].[CMSMF]
+WHERE MF001='VND'
+
+use DB-DEMO
+go
+
+INSERT INTO CMSMG
+SELECT *
+FROM [DB-DEMO_re].[dbo].[CMSMG]
+# WHERE MG001='VND'
+go
+
+
