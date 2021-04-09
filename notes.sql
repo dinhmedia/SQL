@@ -34,6 +34,14 @@ WHERE date='2019-12-23 17:27:05.000';
 SET check_no='AAA/20E0000001'
 WHERE half_no='2001000368';
 
+# Update to columns
+USE [jpdc3000]
+GO
+update porder
+		set cwps='Giaáy carton '+ rtrim(ltrim(cwps))  FROM porder p
+		WHERE  cwps NOT LIKE '%Giaáy carton %'
+		AND cust_no='F101' and bill_type='02' and plan_date = '2021-03-09 23:59:59.000'
+
 - DELETE data on table
 DELETE FROM ToDigitalInvoices
 WHERE half_no = 2002000001;
