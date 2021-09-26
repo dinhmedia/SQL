@@ -42,6 +42,17 @@ update porder
 		WHERE  cwps NOT LIKE '%Giaáy carton %'
 		AND cust_no='F101' and bill_type='02' and plan_date = '2021-03-09 23:59:59.000'
 
+
+# 	update HCSTS_ScanCode
+		set BarCode='GP'+BarCode
+		where BarCode not like '%LW%' 
+		and BarCode not like '%MP%' 
+		and BarCode not like '%JP%'
+		and BarCode not like '%GP%' 
+		and WorkDate > DATEADD(day, -2, CONVERT (date, SYSDATETIME()))
+
+
+
 - DELETE data on table
 DELETE FROM ToDigitalInvoices
 WHERE half_no = 2002000001;
